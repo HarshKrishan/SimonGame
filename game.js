@@ -47,11 +47,16 @@ function game(currentlevel){
     }
   }else{
     playsound("wrong");
+
     $("body").addClass("game-over");
+    $("h1").css("color","red");
     $("h1").text("Game Over, Press Any Key to Restart");
     setTimeout(function () {
       $("body").removeClass("game-over");
+
+      $("h1").css("color","#FEF2BF");
     }, 200);
+
 
     gamestarted = false;
     level =0;
